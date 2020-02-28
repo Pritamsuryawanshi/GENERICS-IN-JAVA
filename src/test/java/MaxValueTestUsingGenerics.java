@@ -21,4 +21,12 @@ public class MaxValueTestUsingGenerics {
         Integer maxNumber = findMax.maxIntegerValue(2, 3, 1);
         Assert.assertEquals((Integer) 3, maxNumber);
     }
+
+    //UC 1.2
+    @Test
+    public void givenThreeIntegers_WhenMaximumValueAtThirdPosition_ReturnSameNumber() {
+        FindMaximumNumber findMax = new FindMaximumNumber();
+        Integer maxNumber = findMax.maxIntegerValue(2, 2, 3);
+        Assert.assertEquals((Integer) 3, maxNumber);
+    }
 }
