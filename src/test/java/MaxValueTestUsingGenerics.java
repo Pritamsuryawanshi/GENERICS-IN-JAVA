@@ -49,10 +49,17 @@ public class MaxValueTestUsingGenerics {
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
 
-    //UC 2.3
+    //UC 3.1
     @Test
     public void givenThreeStrings_WhenMaximumStringAFirstPosition_ReturnSameString() {
         String maxNumber = findMax.maxStringValue("peach", "Apple", "Banana");
+        Assert.assertEquals( "peach", maxNumber);
+    }
+
+    //UC 3.2
+    @Test
+    public void givenThreeStrings_WhenMaximumStringASecondPosition_ReturnSameString() {
+        String maxNumber = findMax.maxStringValue("Apple", "peach", "Banana");
         Assert.assertEquals( "peach", maxNumber);
     }
 }
