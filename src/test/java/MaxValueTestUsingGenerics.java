@@ -48,4 +48,11 @@ public class MaxValueTestUsingGenerics {
         Float maxNumber = findMax.maxFloatValue(2.0f, 1.0f, 3.0f);
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
+
+    //UC 2.3
+    @Test
+    public void givenThreeStrings_WhenMaximumStringAFirstPosition_ReturnSameString() {
+        String maxNumber = findMax.maxStringValue("peach", "Apple", "Banana");
+        Assert.assertEquals( "peach", maxNumber);
+    }
 }
