@@ -34,4 +34,11 @@ public class MaxValueTestUsingGenerics {
         Float maxNumber = findMax.maxFloatValue(3.0f, 2.0f, 1.0f);
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
+
+    //UC 2.2
+    @Test
+    public void givenThreeFloats_WhenMaximumValueAtSecondPosition_ReturnSameNumber() {
+        Float maxNumber = findMax.maxFloatValue(2.0f, 3.0f, 1.0f);
+        Assert.assertEquals((Float) 3.0f, maxNumber);
+    }
 }
