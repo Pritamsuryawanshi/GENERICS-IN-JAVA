@@ -5,68 +5,76 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaxValueTestUsingGenerics {
-    FindMaximumNumber findMax = new FindMaximumNumber();
 
     //UC 1.1
     @Test
     public void givenThreeIntegers_WhenMaximumValueAtFirstPosition_ReturnSameNumber() {
-        int maxNumber = findMax.maxGenericValue(3, 2, 1);
+        FindMaximumNumber findMax = new FindMaximumNumber(3, 2, 1);
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals( 3, maxNumber);
     }
 
     //UC 1.2
     @Test
     public void givenThreeIntegers_WhenMaximumValueAtSecondPosition_ReturnSameNumber() {
-        int maxNumber = findMax.maxGenericValue(2, 3, 1);
-        Assert.assertEquals(3, maxNumber);
+        FindMaximumNumber findMax = new FindMaximumNumber(2, 3, 1);
+        Comparable maxNumber = findMax.maxGenericValue();
+        Assert.assertEquals( 3, maxNumber);
     }
 
     //UC 1.2
     @Test
     public void givenThreeIntegers_WhenMaximumValueAtThirdPosition_ReturnSameNumber() {
-        int maxNumber = findMax.maxGenericValue(2, 2, 3);
+        FindMaximumNumber findMax = new FindMaximumNumber(2, 2, 3);
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals( 3, maxNumber);
     }
 
     //UC 2.1
     @Test
     public void givenThreeFloats_WhenMaximumValueAtFirstPosition_ReturnSameNumber() {
-        Float maxNumber = findMax.maxGenericValue(3.0f, 2.0f, 1.0f);
+        FindMaximumNumber findMax = new FindMaximumNumber(3.0f, 2.0f, 1.0f);
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
 
     //UC 2.2
     @Test
     public void givenThreeFloats_WhenMaximumValueAtSecondPosition_ReturnSameNumber() {
-        Float maxNumber = findMax.maxGenericValue(2.0f, 3.0f, 1.0f);
+        FindMaximumNumber findMax = new FindMaximumNumber(2.0f, 3.0f, 1.0f);
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
 
     //UC 2.3
     @Test
     public void givenThreeFloats_WhenMaximumValueAtThirdPosition_ReturnSameNumber() {
-        Float maxNumber = findMax.maxGenericValue(2.0f, 1.0f, 3.0f);
+        FindMaximumNumber findMax = new FindMaximumNumber(2.0f, 1.0f, 3.0f);
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals((Float) 3.0f, maxNumber);
     }
 
     //UC 3.1
     @Test
     public void givenThreeStrings_WhenMaximumStringAFirstPosition_ReturnSameString() {
-        String maxNumber = findMax.maxGenericValue("Peach", "Apple", "Banana");
+        FindMaximumNumber findMax = new FindMaximumNumber("Peach", "Apple", "Banana");
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals( "Peach", maxNumber);
     }
 
     //UC 3.2
     @Test
     public void givenThreeStrings_WhenMaximumStringASecondPosition_ReturnSameString() {
-        String maxNumber = findMax.maxGenericValue("Apple", "Peach", "Banana");
+        FindMaximumNumber findMax = new FindMaximumNumber("Apple", "Peach", "Banana");
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals( "Peach", maxNumber);
     }
 
     //UC 3.3
     @Test
     public void givenThreeStrings_WhenMaximumStringAThirdPosition_ReturnSameString() {
-        String maxNumber = findMax.maxGenericValue("Apple", "Banana", "Peach");
+        FindMaximumNumber findMax = new FindMaximumNumber("Apple", "Banana", "Peach");
+        Comparable maxNumber = findMax.maxGenericValue();
         Assert.assertEquals( "Peach", maxNumber);
     }
 }
